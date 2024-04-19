@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { BsPlusSquare, BsDashSquare } from 'react-icons/bs';
+import Loader from 'react-loader-spinner'
 
 class ProductItemDetails extends Component {
   constructor(props) {
