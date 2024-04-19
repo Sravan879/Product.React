@@ -3,8 +3,8 @@ import {Link} from 'react-router-dom'
 
 import './index.css'
 
-const ProductCard = ({product}) => {
-  const {title, brand, imageUrl, rating, price} = product
+const ProductCard = ({productData}) => {
+  const {title, brand, imageUrl, rating, price} = productData
 
   return (
     <Link to={`/products/${product.id}`} className="product-item-link">
