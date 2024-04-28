@@ -22,9 +22,15 @@ class ProductItemDetails extends Component {
     const { match } = this.props;
     const productId = match.params.id;
     const apiUrl = `https://api.example.com/productDetails/${productId}`;
+    const options = {
+        headers: {
+          Authorization: `Bearer ${jwtToken}`,
+        },
+        method: 'GET',
+      }
 
     try {
-      const response = await fetch(apiUrl);
+      const response = await fetch(apiUrl, options);
 
       if (response.ok) {
         const productDetails = await response.json();
