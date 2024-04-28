@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 import './index.css'
 
 const ProductCard = ({productData}) => {
-  const {title, brand, imageUrl, rating, price} = productData
+  const {title, brand, imageUrl, rating, price, id} = productData 
 
   return (
     <Link to={`/products/${product.id}`} className="product-item-link">
