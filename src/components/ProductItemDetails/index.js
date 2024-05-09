@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { BsPlusSquare, BsDashSquare } from 'react-icons/bs';
 import Loader from 'react-loader-spinner'
+import Cookies from 'js-cookie'; 
 
 class ProductItemDetails extends Component {
   constructor(props) {
@@ -79,11 +80,11 @@ class ProductItemDetails extends Component {
             <p>{productDetails.description}</p>
             <p>{productDetails.availability}</p>
             <p>{productDetails.brand}</p>
-            <button data-testid="plus" onClick={this.handlePlusClick}>
+            <button data-testid="plus" onClick={this.handlePlusClick} aria-label="close">
               <BsPlusSquare />
             </button>
             <p>{quantity}</p>
-            <button data-testid="minus" onClick={this.handleMinusClick}>
+            <button data-testid="minus" onClick={this.handleMinusClick} aria-label="close">
               <BsDashSquare />
             </button>
             <button>ADD TO CART</button>
