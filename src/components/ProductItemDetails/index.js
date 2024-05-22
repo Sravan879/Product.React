@@ -21,8 +21,9 @@ class ProductItemDetails extends Component {
 
   fetchProductDetails = async () => {
     const { match } = this.props;
+    const jwtToken = Cookies.get('jwt_token')
     const productId = match.params.id;
-    const apiUrl = `https://api.example.com/productDetails/${productId}`;
+    const apiUrl = `https://apis.ccbp.in/products/${productId}`;
     const options = {
         headers: {
           Authorization: `Bearer ${jwtToken}`,
